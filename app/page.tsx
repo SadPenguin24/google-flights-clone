@@ -1,10 +1,11 @@
 "use client";
-import {Container} from "@mui/material";
+import { Container } from "@mui/material";
 import Navbar from "./components/Navbar";
 import FrequentlyAskedQuestions from "./components/FrequentlyAskedQuestions";
 import QuickFind from "./components/QuickFind";
 import Footer from "./components/Footer";
 import PopularDestinations from "./components/PopularDestinations";
+import CheapFlights from "./components/CheapFlights";
 
 // const darkTheme = createTheme({
 //   palette: {
@@ -26,6 +27,7 @@ export default function Home() {
           marginBottom: "1rem",
         }}
       >
+        <CheapFlights />
         <PopularDestinations />
         <FrequentlyAskedQuestions />
         <QuickFind />

@@ -2,7 +2,7 @@ import { Box, Card, CardMedia, Divider, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import React from "react";
 import CardCover from "@mui/joy/CardCover";
-import { popDest } from "../data/popDest";
+import { popDest } from "../data/popDestData";
 
 export default function PopularDestinations() {
   return (
@@ -12,7 +12,10 @@ export default function PopularDestinations() {
       <Grid
         container
         wrap="wrap"
-        sx={{ display: "flex", flexDirection: "row" }}
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+        }}
       >
         {popDest.map((item, index) => (
           <Grid key={index} size={{ xs: 6, md: 2, lg: 1.7 }}>
@@ -34,7 +37,7 @@ export default function PopularDestinations() {
                 component="img"
                 alt="Contemplative Reptile"
                 image={item.imageLink}
-                title="Contemplative Reptile"
+                title={`Flight {index}`}
               />
               <CardCover
                 sx={{
